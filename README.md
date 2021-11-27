@@ -1,6 +1,20 @@
 # vue3-bmapgl
 > BMapGL 的 vue3 绑定，参考 [react 版](https://github.com/huiyan-fe/react-bmapgl/tree/master)
 
+## Todo
+- [-] [Map](#Map)
+- [-] [CustomOverlay](#CustomOverlay)
+- [-] [Polyline](#Polyline)
+- [-] [Polygon](#Polygon)
+- [-] [Circle](#Circle)
+- [] [Label](#Label)
+- [] [Marker](#Marker)
+- [] [InfoWindow](#InfoWindow)
+- [-] [ZoomControl](#ZoomControl)
+- [-] [NavigationControl3D](#NavigationControl3D)
+- [-] [ScaleControl](#ScaleControl)
+- [] [MapvglLayer](#MapvglLayer)
+
 ## 安装
 ```shell
 npm install vue3-bmapgl
@@ -8,7 +22,7 @@ npm install vue3-bmapgl
 ## 使用
 > 在此之前您仍需要手动引入 bmapgl https://api.map.baidu.com/api?type=webgl&v=2.0&ak=您的密钥"
 ``` javascript
-import { Map, CustomOverlay } from 'vue3-bmapgl/dist'
+import { Map, CustomOverlay } from 'vue3-bmapgl'
 ```
 ```html
 <Map ref="mapComp">
@@ -73,7 +87,7 @@ setup() {
 |`enableEditing`| `boolean` |-| 开启可编辑模式 |
 |`autoViewport`| `boolean` |-| 自动聚焦视野|
 
-## polygon
+## Polygon
 |Prop name|Type|Default|Description|
 |---|---|---|---|
 |`points`|`string[] \| [number, number][] \| { lng: number, lat: number }[] \| BMapGL.Point[]`|`required`|坐标点数组|
@@ -87,7 +101,7 @@ setup() {
 |`enableEditing`| `boolean` |-| 开启可编辑模式 |
 |`autoViewport`| `boolean` |-| 自动聚焦视野|
 
-## polyline
+## Polyline
 |Prop name|Type|Default|Description|
 |---|---|---|---|
 |`points`|`string[] \| [number, number][] \| { lng: number, lat: number }[] \| BMapGL.Point[]`|`required`|坐标点数组|

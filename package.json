@@ -1,14 +1,13 @@
 {
   "name": "vue3-bmapgl",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "基于百度地图 JavaScript GL 版 API 封装的 Vue3 组件库",
   "anthor": "xianziycg@gmail.com",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "publish": "cp dist/index.js . && npm publish",
+    "build": "vue-tsc --noEmit && vite build && cp -f dist/index.js . ",
     "serve": "vite preview"
   },
   "dependencies": {
