@@ -2,18 +2,18 @@
 > BMapGL 的 vue3 绑定，参考 [react 版](https://github.com/huiyan-fe/react-bmapgl/tree/master)
 
 ## Todo
-- [-] [Map](#Map)
-- [-] [CustomOverlay](#CustomOverlay)
-- [-] [Polyline](#Polyline)
-- [-] [Polygon](#Polygon)
-- [-] [Circle](#Circle)
-- [] [Label](#Label)
-- [] [Marker](#Marker)
-- [] [InfoWindow](#InfoWindow)
-- [-] [ZoomControl](#ZoomControl)
-- [-] [NavigationControl3D](#NavigationControl3D)
-- [-] [ScaleControl](#ScaleControl)
-- [] [MapvglLayer](#MapvglLayer)
+- [x] [Map](#Map)
+- [x] [CustomOverlay](#CustomOverlay)
+- [x] [Polyline](#Polyline)
+- [x] [Polygon](#Polygon)
+- [x] [Circle](#Circle)
+- [ ] [Label](#Label)
+- [ ] [Marker](#Marker)
+- [ ] [InfoWindow](#InfoWindow)
+- [x] [ZoomControl](#ZoomControl)
+- [x] [NavigationControl3D](#NavigationControl3D)
+- [x] [ScaleControl](#ScaleControl)
+- [ ] [MapvglLayer](#MapvglLayer)
 
 ## 安装
 ```shell
