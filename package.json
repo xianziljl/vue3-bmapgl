@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "publish": "vue-tsc --noEmit && vite build && npm publish",
+    "publish": "cp dist/index.js . && npm publish",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -27,6 +27,12 @@
     "tslint": "^6.1.3",
     "typescript": "^4.5.2",
     "vite": "^2.6.4",
+    "vue-router": "^3.5.3",
     "vue-tsc": "^0.3.0"
+  },
+  "homepage": "https://github.com/xianziljl/vue3-bmapgl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xianziljl/vue3-bmapgl.git"
   }
 }

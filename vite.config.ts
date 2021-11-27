@@ -13,7 +13,7 @@ export default defineConfig({
     ],
     build: {
         lib: {
-            entry: path.resolve(__dirname, 'src/components/index.ts'),
+            entry: path.resolve(__dirname, 'src/index.ts'),
             name: 'vue3-bmapgl',
             formats: ['es'],
             fileName: (format) => `index.js`
