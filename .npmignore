@@ -1,0 +1,11 @@
+.vscode
+node_modules
+src
+types
+.gitignore
+.npmignore
+index.html
+pnpm-lock.yaml
+tsconfig.json
+tslint.json
+vite.config.ts
