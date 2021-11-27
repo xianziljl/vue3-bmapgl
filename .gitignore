@@ -1,5 +1,10 @@
 node_modules
+.vscode
 .DS_Store
 dist
 dist-ssr
 *.local
+src/examples
+src/main.ts
+src/App.vue
+src/assets

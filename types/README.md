@@ -1,6 +1,5 @@
+> Copy from [here](https://github.com/huiyan-fe/react-bmapgl/tree/master/types)
 # types 类型声明文件
-
-> Copy from https://github.com/huiyan-fe/react-bmapgl/tree/master/types
 
 > 为什么👴🏻通过npm安装了`@types/bmapgl`，这儿还有一个`types/bmapgl`呢？
 

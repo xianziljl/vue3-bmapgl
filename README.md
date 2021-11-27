@@ -5,8 +5,8 @@
 ```shell
 npm install vue3-bmapgl
 ```
-
 ## 使用
+> 在此之前您仍需要手动引入 bmapgl https://api.map.baidu.com/api?type=webgl&v=2.0&ak=您的密钥"
 ``` javascript
 import { Map, CustomOverlay } from 'vue3-bmapgl/dist'
 ```
