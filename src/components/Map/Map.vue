@@ -39,6 +39,8 @@ interface MapProps {
     enableInertialDragging?: boolean
     // 个性化地图样式
     mapStyleV2?: BMapGL.MapStyleV2
+    // 是否支持获取地图截图
+    preserveDrawingBuffer?: boolean
 }
 
 interface EmitsType {
@@ -55,7 +57,8 @@ const props = withDefaults(defineProps<MapProps>(), {
     enableDragging: true,
     enableScrollWheelZoom: true,
     enableDoubleClickZoom: true,
-    enableInertialDragging: true
+    enableInertialDragging: true,
+    preserveDrawingBuffer: false,
 })
 
 const emits = defineEmits<EmitsType>()
@@ -82,7 +85,8 @@ const events = new Set([
     'dragstart',
     'dragging',
     'dragend',
-    'resize'
+    'resize',
+    'tilesloaded'
 ])
 
 const instance = getCurrentInstance()
@@ -128,7 +132,9 @@ const init = () => {
     if (map.value) return;
     const {center, zoom} = props
 
-    const mapInstance = new BMapGL.Map(el.value as HTMLDivElement)
+    const mapInstance = new BMapGL.Map(el.value as HTMLDivElement, {
+        preserveDrawingBuffer: props.preserveDrawingBuffer
+    })
     mapInstance.centerAndZoom(getPoint(center), zoom)
 
     bindEventListeners(mapInstance)
