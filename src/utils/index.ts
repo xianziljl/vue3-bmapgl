@@ -28,7 +28,7 @@ export function getPoint(point: PointType, isMC?: boolean): BMapGL.Point {
     return p
 }
 
-export function getOffset(offset?: OffsetType): BMapGL.Size {
+export function getOffsetSize(offset?: OffsetType): BMapGL.Size {
     if (typeof offset === 'number') {
         return new BMapGL.Size(offset, offset)
     }

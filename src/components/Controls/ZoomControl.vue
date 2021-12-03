@@ -2,7 +2,7 @@
 
 <script setup lang="ts">
 import { inject, nextTick, onBeforeUnmount, onMounted, watch } from 'vue'
-import { getOffset } from '../../utils'
+import { getOffsetSize } from '../../utils'
 import type { Ref } from 'vue'
 import type { OffsetType } from '../../utils'
 
@@ -22,11 +22,11 @@ const init = () => {
     const { anchor, offset } = props
     ctrl = new BMapGL.ZoomControl({
         anchor: anchor ?? DEFAULT_ANCHOR,
-        offset: getOffset(offset)
+        offset: getOffsetSize(offset)
     })
 
     watch(() => props.anchor, val => ctrl.setAnchor(val ?? DEFAULT_ANCHOR))
-    watch(() => props.offset, val => ctrl.setOffset(getOffset(val)))
+    watch(() => props.offset, val => ctrl.setOffset(getOffsetSize(val)))
 
     map.value.addControl(ctrl)
 }
@@ -37,7 +37,7 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
     if (!ctrl) return
-    map?.value.removeControl(ctrl)
+    map?.value?.removeControl(ctrl)
 })
 
 </script>
