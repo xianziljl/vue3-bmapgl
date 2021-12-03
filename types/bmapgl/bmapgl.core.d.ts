@@ -162,6 +162,7 @@ declare namespace BMapGL {
         enableHighResolution?: boolean;
         enableAutoResize?: boolean;
         enableMapClick?: boolean;
+        preserveDrawingBuffer?: boolean;
     }
     interface Viewport {
         center: Point;
