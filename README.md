@@ -49,6 +49,7 @@ import { Map, CustomOverlay } from 'vue3-bmapgl'
 |`enableDoubleClickZoom`|`boolean`|`true`|是否允许鼠标双击缩放|
 |`enableInertialDragging`|`boolean`|`true`|是否允许惯性拖拽|
 |`mapStyleV2`|`BMapGL.MapStyleV2`|-|个性化地图样式|
+|`preserveDrawingBuffer`|`boolean`|`false`|是否支持获取地图截图|
 
 ### 获取 map 实例
 ```javascript
