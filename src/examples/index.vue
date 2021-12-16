@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import {
     Map,
     ZoomControl,
@@ -38,7 +38,7 @@ import {
     MiniMapControl,
     ScaleControl
 } from '..'
-import styleJson from './assets/style.json'
+// import styleJson from './assets/style.json'
 import path from './assets/path.json'
 
 const _path = path as [number, number][]
