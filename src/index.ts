@@ -9,3 +9,4 @@ export { default as CustomOverlay } from './components/Overlays/CustomOverlay.vu
 export { default as Polyline } from './components/Overlays/Polyline.vue'
 export { default as Polygon } from './components/Overlays/Polygon.vue'
 export { default as Circle } from './components/Overlays/Circle.vue'
+export { default as Marker } from './components/Overlays/Marker.vue'

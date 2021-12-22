@@ -17,6 +17,14 @@
         <ScaleControl :anchor="1" :offset="[80, 20]"></ScaleControl>
 
         <MiniMapControl></MiniMapControl>
+        <Marker 
+        position="115.968582,39.050007" 
+        :enableDragging="true"
+        :icon="iconMarker"
+        :icon-size="iconSize"
+        :autoViewport="true"
+        title="我是title1111"
+        @click="log"></Marker>
     </Map>
 
     <div style="position: absolute;left: 10px;top: 10px;z-index: 100;">
@@ -27,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import {
     Map,
     ZoomControl,
@@ -36,9 +44,10 @@ import {
     Circle,
     NavigationControl3D,
     MiniMapControl,
-    ScaleControl
+    ScaleControl,
+    Marker
 } from '..'
-// import styleJson from './assets/style.json'
+import styleJson from './assets/style.json'
 import path from './assets/path.json'
 
 const _path = path as [number, number][]
@@ -46,12 +55,22 @@ const _path = path as [number, number][]
 const zoom = ref<number>(10)
 const toggle = ref(false)
 const mapComp = ref<{ map: BMapGL.Map }>()
+const iconMarker = ref('/src/examples/assets/car.png');
+const iconSize = 32
 
 // const customOverlayPosition = new BMapGL.Point(116.08405648702066, 39.30625062759024)
 
 const log = (e: any) => {
     console.log(e)
 }
+onMounted(() => {
+mapComp.value?.map.setOptions({
+        styleUrl: 'http://180.76.60.136:8219/baidumap/bmapgl/mapstyle/luWangMapStyle.json',
+        style: {styleJson},
+    });
+})
+
+
 </script>
 
 <style>
