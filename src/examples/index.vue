@@ -25,7 +25,10 @@
         :autoViewport="true"
         title="我是title1111"
         @click="log"></Marker>
+        <MapvglView></MapvglView>
     </Map>
+
+   
 
     <div style="position: absolute;left: 10px;top: 10px;z-index: 100;">
         <button @click="zoom++">放大</button>
@@ -47,6 +50,7 @@ import {
     ScaleControl,
     Marker
 } from '..'
+import MapvglView from '../components/MapVGL/MapvglView.vue';
 import styleJson from './assets/style.json'
 import path from './assets/path.json'
 
