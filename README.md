@@ -123,7 +123,7 @@ setup() {
 |---|---|---|---|
 |`position`|`string[] \| [number, number][] \| { lng: number, lat: number }[] \| BMapGL.Point[]`|`required`|坐标点数组|
 |`iconSize`|`[number, number] \| number`|-| 标注的Icon尺寸|
-|`icon`| `BMapGL.Icon | string` |-| 标注的Icon图标、path |
+|`icon`| `BMapGL.Icon \| string` |-| 标注的Icon图标、path |
 |`title`| `string` |-| 标注的标题，当鼠标移至标注上时显示此标题 |
 |`enableMassClear`| `boolean`|-| 可通过 `map.clearOverlays()` 方法移除 |
 |`enableDragging`| `boolean` |-| 是否可拖拽 |
