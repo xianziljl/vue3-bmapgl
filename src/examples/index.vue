@@ -19,13 +19,12 @@
         <MiniMapControl></MiniMapControl>
         <Marker 
         position="115.968582,39.050007" 
+        @click="log"
         :enableDragging="true"
         :icon="iconMarker"
         :icon-size="iconSize"
         :autoViewport="true"
-        title="我是title1111"
-        @click="log"></Marker>
-        <MapvglView></MapvglView>
+        title="我是title"></Marker>
     </Map>
 
    
@@ -67,12 +66,6 @@ const iconSize = 32
 const log = (e: any) => {
     console.log(e)
 }
-onMounted(() => {
-mapComp.value?.map.setOptions({
-        styleUrl: 'http://180.76.60.136:8219/baidumap/bmapgl/mapstyle/luWangMapStyle.json',
-        style: {styleJson},
-    });
-})
 
 
 </script>

@@ -49,7 +49,7 @@ const init = () => {
     } else if( typeof propsIcon === 'string') {
         icon = new BMapGL.Icon(propsIcon, getOffsetSize(props.iconSize));
     }else {
-        const defaultIconUrl ='http://180.76.60.136:8219/baidumap/bmapgl/images/marker_red.png';
+        const defaultIconUrl = '/src/assets/images/marker_red.png';
         icon = new BMapGL.Icon(defaultIconUrl, new BMapGL.Size(23, 25));
     }
     
