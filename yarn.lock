@@ -664,6 +664,11 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
+mapvgl@^1.0.0-beta.140:
+  version "1.0.0-beta.140"
+  resolved "http://registry.npm.baidu-int.com/mapvgl/-/mapvgl-1.0.0-beta.140.tgz#921c34efbdda249a7e4853f9fa86dbe082491c7b"
+  integrity sha1-khw0773aJJp+SFP5+obb4IJJHHs=
+
 minimatch@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.baidu-int.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"

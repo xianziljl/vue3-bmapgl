@@ -8,7 +8,7 @@
 - [x] [Polygon](#Polygon)
 - [x] [Circle](#Circle)
 - [ ] [Label](#Label)
-- [ ] [Marker](#Marker)
+- [x] [Marker](#Marker)
 - [ ] [InfoWindow](#InfoWindow)
 - [x] [ZoomControl](#ZoomControl)
 - [x] [NavigationControl3D](#NavigationControl3D)
@@ -113,6 +113,22 @@ setup() {
 |`enableMassClear`| `boolean`|-| 可通过 `map.clearOverlays()` 方法移除 |
 |`enableEditing`| `boolean` |-| 开启可编辑模式 |
 |`autoViewport`| `boolean` |-| 自动聚焦视野|
+
+
+
+
+
+## Marker
+|Prop name|Type|Default|Description|
+|---|---|---|---|
+|`position`|`string[] \| [number, number][] \| { lng: number, lat: number }[] \| BMapGL.Point[]`|`required`|坐标点数组|
+|`iconSize`|`[number, number] \| number`|-| 标注的Icon尺寸|
+|`icon`| `BMapGL.Icon \| string` |-| 标注的Icon图标、path |
+|`title`| `string` |-| 标注的标题，当鼠标移至标注上时显示此标题 |
+|`enableMassClear`| `boolean`|-| 可通过 `map.clearOverlays()` 方法移除 |
+|`enableDragging`| `boolean` |-| 是否可拖拽 |
+|`autoViewport`| `boolean` |-| 自动聚焦视野|
+|`isTop`|`boolean`|-| 是否将标注置于其他标注之上。默认情况下纬度低盖住纬度高的标注|
 
 
 
