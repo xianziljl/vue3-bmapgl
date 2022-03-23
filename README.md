@@ -70,7 +70,7 @@ setup() {
 |`coordType`|`bd09ll \| bd09mc`|`bd09ll`|坐标类型，百度经纬度坐标或百度墨卡托坐标|
 |`zIndex`|`number`|-|层级|
 |`renderOutSize`|`number`|`0`|元素位置在超出视图外多少像素后停止渲染|
-|`renderLevel`|`[number, number] \| number`|-|在地图缩放层级范围显示[min, max] \| min|
+|`renderLevel`|`[number, number] \| number`|-|在地图缩放层级范围内显示[min, max] \| min|
 |`autoViewport`|`boolean`|-|是否在组件创建后自动聚焦到位置|
 
 ## Circle
@@ -130,5 +130,11 @@ setup() {
 |`autoViewport`| `boolean` |-| 自动聚焦视野|
 |`isTop`|`boolean`|-| 是否将标注置于其他标注之上。默认情况下纬度低盖住纬度高的标注|
 
+
+## NavigationContral3D
+
+## ScaleControl
+
+## ZoomControl
 
 

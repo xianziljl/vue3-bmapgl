@@ -20,16 +20,6 @@
 </div>
 </template>
 
-<script lang="ts">
-
-// class MiniMapControl extends BMapGL.Control{
-//     constructor() {
-//         super()
-//     }
-// }
-
-</script>
-
 <script setup lang="ts">
 import { getPoint, PointType } from '../../utils'
 import { inject, onMounted, reactive, nextTick, ref, computed, onBeforeUnmount } from 'vue'
