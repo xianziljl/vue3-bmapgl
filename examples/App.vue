@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import Example from './examples/index.vue'
+import Example from './index.vue'
 </script>

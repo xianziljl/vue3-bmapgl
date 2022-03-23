@@ -57,7 +57,7 @@ import {
     // MiniMapControl,
     ScaleControl,
     Marker
-} from '../index'
+} from '../src/index'
 // import MapvglView from '../components/MapVGL/MapvglView.vue';
 // import styleJson from './assets/style.json'
 import path from './assets/path.json'
