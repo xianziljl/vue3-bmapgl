@@ -1,7 +1,8 @@
 .vscode
 node_modules
-src
-types
+examples
+# src
+# types
 .gitignore
 .npmignore
 index.html
