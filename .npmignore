@@ -1,8 +1,8 @@
 .vscode
 node_modules
 examples
-# src
-# types
+src
+types
 .gitignore
 .npmignore
 index.html
@@ -10,3 +10,6 @@ pnpm-lock.yaml
 tsconfig.json
 tslint.json
 vite.config.ts
+yarn-error.log
+yarn.lock
+

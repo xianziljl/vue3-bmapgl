@@ -4,4 +4,3 @@ node_modules
 dist
 dist-ssr
 *.local
-index.js
