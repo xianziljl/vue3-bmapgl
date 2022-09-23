@@ -96,16 +96,17 @@ provide('map', map)
 defineExpose({ map })
 
 const watchProps = (map: BMapGL.Map) => {
+    console.log(map)
     const watchConfig = { immediate: true }
     watch(() => props.center, val => map.setCenter(getPoint(val)))
     watch(() => props.zoom, val => map.setZoom(val))
-    watch(() => props.maxZoom, val => map.setMaxZoom(val), watchConfig)
-    watch(() => props.minZoom, val => map.setMinZoom(val), watchConfig)
-    watch(() => props.mapType, val => map.setMapType(val === 'earth' ? BMAP_EARTH_MAP : BMAP_NORMAL_MAP), watchConfig)
-    watch(() => props.heading, val => map.setHeading(val ?? 0), watchConfig)
+    watch(() => props.maxZoom, val => map.setMaxZoom && map.setMaxZoom(val), watchConfig)
+    watch(() => props.minZoom, val => map.setMinZoom && map.setMinZoom(val), watchConfig)
+    watch(() => props.mapType, val => map.setMapType && map.setMapType(val === 'earth' ? BMAP_EARTH_MAP : BMAP_NORMAL_MAP), watchConfig)
+    watch(() => props.heading, val => map.setHeading && map.setHeading(val ?? 0), watchConfig)
     watch(() => props.tilt, val => map.setTilt(val ?? 0), watchConfig)
     watch(() => props.enableRotate, val => val ? map.enableRotate() : map.disableRotate(), watchConfig)
-    watch(() => props.enableTilt, val => val ? map.enableTilt() : map.disableTilt(), watchConfig)
+    watch(() => props.enableTilt, val => val ? map.enableTilt && map.enableTilt() : map.disableTilt && map.disableTilt(), watchConfig)
     watch(() => props.enableDragging, val => val ? map.enableDragging() : map.disableDragging(), watchConfig)
     watch(() => props.enableScrollWheelZoom, val => val ? map.enableScrollWheelZoom() : map.disableScrollWheelZoom(), watchConfig)
     watch(() => props.enableDoubleClickZoom, val => val ? map.enableDoubleClickZoom() : map.disableDoubleClickZoom(), watchConfig)
@@ -132,10 +133,16 @@ const init = () => {
         preserveDrawingBuffer: props.preserveDrawingBuffer
     })
     mapInstance.centerAndZoom(getPoint(center), zoom)
+    console.log(mapInstance)
 
-    bindEventListeners(mapInstance)
-    watchProps(mapInstance)
+    try {
+        bindEventListeners(mapInstance)
+        watchProps(mapInstance)
+    } catch (e) {
+        console.log(e)
+    }
 
+    console.log(mapInstance)
     map.value = mapInstance
 }
 
