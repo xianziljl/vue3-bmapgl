@@ -98,7 +98,7 @@ declare namespace BMapGL {
         addControl(control: Control): void;
         removeControl(control: Control): void;
         getContainer(): HTMLElement;
-        getHeading(): number,
+        getHeading(): number;
         addContextMenu(menu: ContextMenu): void;
         removeContextMenu(menu: ContextMenu): void;
         addOverlay(overlay: Overlay): void;
