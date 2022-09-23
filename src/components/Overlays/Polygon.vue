@@ -5,7 +5,13 @@ import { getPoint } from '../../utils'
 import { getCurrentInstance, inject, nextTick, onBeforeUnmount, onMounted, Ref, watch } from 'vue'
 import type { PointType } from '../../utils'
 
-interface PlaylineProps {
+const color = '#00ffff'
+
+const emits = defineEmits<{
+    (e: string, data: Object): void
+}>()
+
+const props = defineProps<{
     points: PointType[],
     //折线的颜色，同CSS颜色
     strokeColor?: string;
@@ -25,17 +31,8 @@ interface PlaylineProps {
     enableEditing?: boolean;
     // 自动聚焦视野
     autoViewport?: boolean;
-}
+}>()
 
-interface EmitsType {
-    (e: string, data: Object): void
-}
-
-const color = '#00ffff'
-
-const emits = defineEmits<EmitsType>()
-
-const props = defineProps<PlaylineProps>()
 const instance = getCurrentInstance()
 const attrs = instance?.attrs ?? {}
 

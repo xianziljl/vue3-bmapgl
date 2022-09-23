@@ -5,7 +5,13 @@ import { getPoint } from '../../utils'
 import { getCurrentInstance, inject, nextTick, onBeforeUnmount, onMounted, Ref, watch } from 'vue'
 import type { PointType } from '../../utils'
 
-interface PlaylineProps {
+const color = '#00ffff'
+
+const emits = defineEmits<{
+    (e: string, data: Object): void
+}>()
+
+const props = defineProps<{
     // 中心点
     center: PointType,
     // 圆形的半径，单位为米
@@ -28,17 +34,7 @@ interface PlaylineProps {
     enableEditing?: boolean;
     // 自动聚焦视野
     autoViewport?: boolean;
-}
-
-interface EmitsType {
-    (e: string, data: Object): void
-}
-
-const color = '#00ffff'
-
-const emits = defineEmits<EmitsType>()
-
-const props = defineProps<PlaylineProps>()
+}>()
 const instance = getCurrentInstance()
 const attrs = instance?.attrs ?? {}
 

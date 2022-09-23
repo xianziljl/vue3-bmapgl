@@ -10,7 +10,7 @@ import { getCurrentInstance, onBeforeUnmount, onMounted, provide, ref, watch } f
 import { getPoint } from '../../utils'
 import type { PointType } from '../../utils'
 
-interface MapProps {
+const props = withDefaults(defineProps<{
     // 中心位置
     center?: PointType
     // 缩放级别
@@ -41,13 +41,7 @@ interface MapProps {
     mapStyleV2?: BMapGL.MapStyleV2
     // 是否支持获取地图截图
     preserveDrawingBuffer?: boolean
-}
-
-interface EmitsType {
-    (e: string, data: Object): void
-}
-
-const props = withDefaults(defineProps<MapProps>(), {
+}>(), {
     center: '116.41088,39.898774',
     zoom: 12,
     minZoom: 1,
@@ -61,7 +55,9 @@ const props = withDefaults(defineProps<MapProps>(), {
     preserveDrawingBuffer: false,
 })
 
-const emits = defineEmits<EmitsType>()
+const emits = defineEmits<{
+    (e: string, data: Object): void
+}>()
 
 const events = new Set([
     'click',

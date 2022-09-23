@@ -66,7 +66,7 @@ import { getPoint, getRenderLevel, isMC } from '../../utils'
 import { inject, nextTick, onBeforeUnmount, onMounted, Ref, ref, watch } from 'vue'
 import type { PointType } from '../../utils'
 
-interface CustomOverlayProps {
+const props = defineProps<{
     // 标注点的坐标
     position: PointType;
     // 坐标体系，可选百度经纬度坐标或百度墨卡托坐标
@@ -79,9 +79,7 @@ interface CustomOverlayProps {
     renderLevel?: [number, number] | number,
     // 自动聚焦视野
     autoViewport?: boolean;
-}
-
-const props = defineProps<CustomOverlayProps>()
+}>()
 
 const el = ref<HTMLElement>()
 const map = inject<Ref<BMapGL.Map>>('map')

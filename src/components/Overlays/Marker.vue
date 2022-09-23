@@ -5,8 +5,7 @@ import {inject, Ref, onMounted, defineProps, nextTick, watch, getCurrentInstance
 import type { PointType , OffsetType} from '../../utils';
 import { getPoint, getOffsetSize } from '../../utils'
 
-
-interface MarkerProps {
+const props = defineProps<{
     // 标注点的坐标
     position: PointType,
     // 自动聚焦视野
@@ -23,13 +22,10 @@ interface MarkerProps {
     isTop?: boolean,
     // 标注的标题，当鼠标移至标注上时显示此标题
     title?: string
-}
-
-interface EmitsType {
+}>()
+const emits = defineEmits<{
     (e: string, data: Object): void
-}
-const props = defineProps<MarkerProps>()
-const emits = defineEmits<EmitsType>()
+}>()
 
 const map = inject<Ref<BMapGL.Map>>('map')
 let marker: BMapGL.Marker

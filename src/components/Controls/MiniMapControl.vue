@@ -26,15 +26,13 @@ import { inject, onMounted, reactive, nextTick, ref, computed, onBeforeUnmount }
 import type { Ref } from 'vue'
 import type { OffsetType } from '../../utils'
 
-interface MiniMapControlProps {
+const props = withDefaults(defineProps<{
     size?: number,
     bounds?: [PointType, PointType],
     anchor?: BMapGL.ControlAnchor,
     offset?: OffsetType,
     image?: string
-}
-
-const props = withDefaults(defineProps<MiniMapControlProps>(), {
+}>(), {
     size: 200
 })
 
